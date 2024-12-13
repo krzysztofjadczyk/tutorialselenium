@@ -40,7 +40,10 @@ public class SeleniumTest {
         //sprawdzenie rezultatu czy zawiera selenium.dev
         WebElement result = driver.findElement(By.xpath("//a[contains(@href,'selenium.dev')]//h3"));
 
+        WebElement graphResult = driver.findElement(By.cssSelector(".YmvwI"));
+
         Assert.assertTrue(result.isDisplayed());
+        Assert.assertTrue(graphResult.isDisplayed());
     }
 
     public WebDriver getDriver(String browser) {

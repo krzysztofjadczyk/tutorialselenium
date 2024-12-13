@@ -47,6 +47,7 @@ public class CssSelectors {
         //all forms after label
         driver.findElement(By.cssSelector("label ~ form"));
 
+        //wyszukiwanie elementów po nazwie atrybuty
         By attrTag = By.cssSelector("input[name='fname']");
         By attContains = By.cssSelector("[name*='name']");
         By attStarts = By.cssSelector("[name^='f']");
@@ -57,6 +58,17 @@ public class CssSelectors {
         driver.findElement(attStarts);
         driver.findElement(attEnds);
 
+        //wyszukiwanie dzieci tagu nadrzędnego
+        By firstChild = By.cssSelector("li:first-child");
+        By secondChild = By.cssSelector("li:last-child");
+        By thirdChild = By.cssSelector("li:nth-child(3)");
+
+        driver.findElement(firstChild);
+        driver.findElement(secondChild);
+        driver.findElement(thirdChild);
+
+
+        //zamykanie przeglądarki
         driver.quit();
     }
 }
