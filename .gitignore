@@ -1,6 +1,7 @@
 /target/
 /.idea/
 .idea/workspace.xml
+/.idea/workspace.xml
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -39,5 +40,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/.idea/
-/.idea/
+
