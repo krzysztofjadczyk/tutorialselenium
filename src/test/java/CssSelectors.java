@@ -24,6 +24,39 @@ public class CssSelectors {
         driver.findElements(By.cssSelector("[name='fname']"));
         driver.findElements(By.cssSelector("[class='topSecret']"));
 
+        driver.findElement(By.cssSelector("*")); //zwraca wszystkie tagi ze strony
+
+        //zwraca listy wewnątrz div
+        driver.findElement(By.cssSelector("div ul"));
+
+        //szukamy tr w całym table
+        driver.findElement(By.cssSelector("table tr"));
+
+        //zwraca tylko tr wewnątrz tbody
+        driver.findElement(By.cssSelector("tbody tr"));
+
+        //zwraca pierwszy element (dziecko) w div
+        driver.findElement(By.cssSelector("div > ul"));
+
+        //zwraca pierwszy ul (dziecko) w tbody
+        driver.findElements(By.cssSelector("tbody > ul"));
+
+        //first form after label
+        driver.findElement(By.cssSelector("label + form"));
+
+        //all forms after label
+        driver.findElement(By.cssSelector("label ~ form"));
+
+        By attrTag = By.cssSelector("input[name='fname']");
+        By attContains = By.cssSelector("[name*='name']");
+        By attStarts = By.cssSelector("[name^='f']");
+        By attEnds = By.cssSelector("[name$='name']");
+
+        driver.findElement(attrTag);
+        driver.findElement(attContains);
+        driver.findElement(attStarts);
+        driver.findElement(attEnds);
+
         driver.quit();
     }
 }
